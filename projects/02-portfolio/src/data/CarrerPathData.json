@@ -1,26 +1,20 @@
 {  
-    "education" : [
-        {
-            "title" : "Bachelor with emphasis on systems",
-            "institution" : "General Alfredo Vasquez Educational Institution",
-            "year" : "2006 - 2012"
-        },
-        {
-            "title" : "Information Systems Technologist",
-            "institution" : "Universidad del Valle",
-            "year" : "2017 - 2021"
-        }
-    ],
     "experience" : [
+        {
+            "title" : "Java developer",
+            "institution" : "CIAT - Center International for Tropical Agriculture",
+            "year" : "December 2021 - "
+        },
         {
             "title" : "Service desk intern",
             "institution" : "CIAT - Center International for Tropical Agriculture",
             "year" : "June 2021 - November 2021"
         },
         {
-            "title" : "Java developer",
-            "institution" : "CIAT - Center International for Tropical Agriculture",
-            "year" : "December 2021 - "
+            "title" : "Information Systems Technologist - Degree",
+            "institution" : "Universidad del Valle",
+            "year" : "2017 - 2021"
         }
+        
     ]
 }

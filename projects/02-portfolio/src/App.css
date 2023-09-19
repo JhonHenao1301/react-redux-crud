@@ -1,8 +1,56 @@
 #root {
   block-size: 100vh;
-  padding: 2rem;
 }
 
-h3 {
-  color: #f78787
+.timeline {
+  content: '';
+  position: absolute;
+  background: black;
+  width: 1px;
+  left: 50%;
+}
+
+#child {
+  position: relative;
+  margin: 1rem;
+  border: 1px solid black;
+}
+
+#child:nth-child(odd) {
+  float: left;
+}
+
+#child:nth-child(odd)::before {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgb(79 70 229);
+  inline-size: 1rem;
+  block-size: 1rem;
+  left: -1.55rem;
+  top: .5rem;
+}
+
+#child:nth-child(even) {
+  float: right;
+}
+
+#child:nth-child(even)::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  background: rgb(79 70 229);
+  inline-size: 1rem;
+  block-size: 1rem;
+  right: -1.55rem;
+  top: .5rem;
+}
+
+.content {
+  inline-size: 19rem;
+  padding: 1rem;
+}
+
+ion-icon {
+  font-size: 64px;
 }

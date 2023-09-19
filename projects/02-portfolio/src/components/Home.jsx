@@ -1,19 +1,18 @@
 
+import photo from '../assets/photo.jpeg'
+
 export default function Home () {
  return ( 
-    <div>
-        <section>
-            <h2>Hi, I'm</h2>
-            <h1>Jhon Edinson Henao Puenayan</h1>
-            <h2>Frontend Developer</h2>
-            <div>
-                <i>1</i>
-                <i>2</i>
-                <i>3</i>
-                <i>4</i>
-            </div>
+    <div className="grid gap-12 md:grid-flow-col md:py-12">
+        <section className="flex flex-col gap-4">
+            <h1>Front-End React Developer</h1>
+            <h3>Hi, I'm Jhon Edinson Henao Puenayan. A passionate Front-End react developer based in Cali, Colombia</h3>
+            {/* <div className='flex gap-4'>
+            </div> */}
         </section>
-        <img src="" alt="" />
+        <section className='flex justify-center'>
+            <img src={photo} className='rounded-full w-56 h-56' alt="" />
+        </section>
     </div>
  )
 }
