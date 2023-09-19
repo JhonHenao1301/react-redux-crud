@@ -9,13 +9,14 @@ export default {
     extend: {
       gridTemplateColumns: {
         // Complex site-specific column configuration
-        'card': '1fr minmax(200px, 250px)',
-        'tag': 'repeat(3, minmax(80px, 100px))'
+        'card': 'minmax(200px, 250px) 1fr',
+        'tag': 'repeat(3, minmax(80px, 180px))'
       }
     },
     fontSize: {
       'title': '2rem',
       'subtitle': '1.125rem',
+      'tag': '.7rem',
     }
   },
   plugins: [],
