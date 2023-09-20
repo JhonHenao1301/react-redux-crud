@@ -10,7 +10,7 @@ export default {
       gridTemplateColumns: {
         // Complex site-specific column configuration
         'card': 'minmax(200px, 250px) 1fr',
-        'tag': 'repeat(3, minmax(80px, 180px))'
+        'tag': 'repeat(auto-fit, minmax(80px, 140px))'
       }
     },
     fontSize: {

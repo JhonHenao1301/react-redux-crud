@@ -11,11 +11,15 @@ h3 {
 }
 
 .tag {
-    @apply p-1 rounded-lg bg-slate-600 text-white
+    @apply p-1 rounded-lg bg-slate-200 text-slate-700
 }
 
 #root {
   block-size: 100vh;
+}
+
+.font-link {
+  font-family: 'Poppins', sans-serif;
 }
 
 .timeline {

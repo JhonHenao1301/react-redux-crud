@@ -11,7 +11,7 @@ function App() {
 
   const [ data, setData ] = useState()
   return (
-    <div className='font-mono'>
+    <div className='font-link'>
       <Navbar />
       <main className='flex flex-col gap-20 py-8 px-8 md:m-auto md:max-w-2xl'>
         <Home />
