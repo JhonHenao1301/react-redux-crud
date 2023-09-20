@@ -9,9 +9,9 @@ import './App.css'
 function App() {
 
   return (
-    <div className='font-link'>
+    <div className='font-link bg-slate-50'>
       <Navbar />
-      <main className='flex flex-col gap-20 py-8 px-8 bg-slate-100 md:m-auto md:max-w-4xl'>
+      <main className='flex flex-col gap-20 py-8 px-8 md:m-auto md:max-w-4xl'>
         <Home />
         <About />
         <CarrerPath />
