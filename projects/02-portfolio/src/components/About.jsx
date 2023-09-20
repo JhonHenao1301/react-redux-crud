@@ -6,7 +6,7 @@ export default function About () {
     <div className="flex flex-col gap-8">
         <h1 className="text-center">About</h1>
         <div className="grid grid-cols-1 justify-center gap-12 md:grid-cols-2 md:gap-12">
-            <section className="flex justify-center w-100">
+            <section className="flex justify-center md:max-w-fit">
                 <Lottie animationData={animationData}></Lottie>
             </section>
             <section className="flex flex-wrap content-center">

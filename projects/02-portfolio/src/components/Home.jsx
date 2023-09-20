@@ -7,7 +7,7 @@ export default function Home () {
         <section className="flex flex-col gap-6">
             <h1>Front-End React Developer</h1>
             <h3>Hi, I'm Jhon Edinson Henao Puenayan. A passionate Front-End react developer based in Cali, Colombia</h3>
-            <button className='border border-slate-600 py-2 rounded-lg'>
+            <button className='border border-slate-600 py-2 rounded-lg md:max-w-max md:py-2 md:px-4'>
                 <a href={pdf} target="_blank" rel="noopener noreferrer" download="hv_me.pdf" className='flex justify-center gap-4 font-bold'>
                     <ion-icon size="large" name="cloud-download-outline"></ion-icon>
                     CV

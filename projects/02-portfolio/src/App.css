@@ -74,3 +74,21 @@ h3 {
 ion-icon {
   font-size: 4rem;
 }
+
+/* loading animation */
+@keyframes spinner {
+  to  {
+      transform: rotate(360deg);
+  }
+}
+
+.loading {
+  width: 6rem;
+  height: 6rem;
+  margin: 0 auto;
+  margin-top:  10rem;
+  border-radius: 50%;
+  border: 8px solid #000;
+  border-top-color: #FCAF3C;
+  animation: spinner .6s linear infinite;
+}

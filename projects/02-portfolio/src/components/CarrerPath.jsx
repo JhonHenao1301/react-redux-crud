@@ -1,4 +1,4 @@
-import { experience } from '../data/CarrerPathData'
+import { experience } from '../mocks/CarrerPathData'
 
 export default function CarrerPath () {
     // console.log(education);

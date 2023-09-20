@@ -3,10 +3,10 @@ import { useState } from "react";
 export default function Navbar() {
     const [open,setOpen] = useState(false);
     return (
-        <nav className="shadow-sm w-full sticky top-0 left-0">
-            <div className="flex bg-slate-200 py-4 md:px-8 px-8 items-center justify-between"> 
-                <div className="font-bold text-2xl cursor-pointer flex items-center text-gray-600">
-                    <span className="text-3xl text-indigo-600 mr-1 pt-2">
+        <nav className="shadow-sm w-full sticky top-0 left-0 z-10">
+            <div className="flex text-slate-200 bg-slate-700 py-4 md:px-8 px-8 items-center justify-between"> 
+                <div className="font-bold text-2xl cursor-pointer flex items-center">
+                    <span className="text-3xl text-indigo-400 mr-1 pt-2">
                         <ion-icon size="large" name="code-working-outline"></ion-icon>
                     </span>
                     JH
@@ -20,7 +20,7 @@ export default function Navbar() {
                 </div>
 
                 <div>
-                    <ul className={`bg-white md:flex md:items-center md:pb-0 pb-12 absolute md:static md:bg-slate-200 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-8 transition-all duration-400 ease-in ${open ? 'top-20 ':'top-[-490px]'}`}>
+                    <ul className={`bg-slate-500 md:flex md:items-center pt-4 pb-4 absolute md:static md:bg-slate-700 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-8 transition-all duration-400 ease-in ${open ? 'top-20 ':'top-[-490px]'}`}>
                         {[
                             ['Home'],
                             ['About'],
@@ -28,8 +28,8 @@ export default function Navbar() {
                             ['Projects'],
                             ['Contact'],
                         ].map(([title], index) => (
-                            <li className="md:ml-8 text-xl md:my-0 my-4" key={index}>
-                                <a href="/" className="rounded-lg text-gray-500 font-medium hover:bg-slate-300 hover:text-slate-900 duration-500">
+                            <li className="md:ml-6 text-xl md:my-0 my-6" key={index}>
+                                <a href="/" className="p-2 rounded-lg font-medium hover:bg-slate-200 hover:text-slate-700 duration-500">
                                     {title}
                                 </a>
                             </li>
