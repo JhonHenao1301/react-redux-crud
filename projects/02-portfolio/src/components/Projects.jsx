@@ -4,13 +4,13 @@ import { useFetch } from '../hooks/useFetch'
 export default function Projects () {
     const { data, isLoading } = useFetch()
     if(isLoading) {
-        return <div className='flex flex-col mt-50 gap-8'>
+        return <div className='flex flex-col md:mt-60 gap-8'>
             <h1 className='text-center'>Projects</h1>
             <div className='loading mt-5'></div>
         </div>
     }
     return ( 
-        <div className="flex flex-col mt-60 gap-8">
+        <div className="flex flex-col md:mt-60 gap-8">
             <h1 className='text-center'>Projects</h1>
             {
                 !isLoading ?
