@@ -41,8 +41,8 @@ export default function Projects () {
                                 </section>
                                 <section className='m-auto w-auto'>
                                     <img 
-                                        className='rounded-xl w-fit'
-                                        src={`images/${element.name}.jpg`} 
+                                        className='rounded-xl w-auto'
+                                        src={`images/${element.name}.jpg`}
                                         alt="" 
                                     />
                                 </section>
