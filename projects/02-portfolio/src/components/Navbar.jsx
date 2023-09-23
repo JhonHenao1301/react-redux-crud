@@ -22,15 +22,15 @@ export default function Navbar() {
                 <div>
                     <ul className={`bg-slate-500 md:flex md:items-center pt-4 pb-4 absolute md:static md:bg-slate-700 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-8 transition-all duration-400 ease-in ${open ? 'top-20 ':'top-[-490px]'}`}>
                         {[
-                            ['Home'],
-                            ['About'],
-                            ['Carrer path'],
-                            ['Projects'],
-                            ['Contact'],
-                        ].map(([title], index) => (
+                            {name:'Home', link:'/'},
+                            {name:'About', link:'#about'},
+                            {name:'Carrer path', link: '#carrer'},
+                            {name:'Projects', link: '#projects'},
+                            {name:'Contact', link:'#contact'},
+                        ].map(({name, link}, index) => (
                             <li className="md:ml-6 text-xl md:my-0 my-6" key={index}>
-                                <a href="/" className="p-2 rounded-lg font-medium hover:bg-slate-200 hover:text-slate-700 duration-500">
-                                    {title}
+                                <a href={link} className="p-2 rounded-lg font-medium hover:bg-slate-200 hover:text-slate-700 duration-500">
+                                    {name}
                                 </a>
                             </li>
                         ))}

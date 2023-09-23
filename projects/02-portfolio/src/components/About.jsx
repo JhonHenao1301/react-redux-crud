@@ -3,7 +3,7 @@ import animationData from "../assets/animation_lmo5nfny.json"
 
 export default function About () {
  return ( 
-    <div className="flex flex-col gap-12">
+    <div className="flex flex-col gap-12" id="about">
         <h1 className="text-center">About</h1>
         <div className="grid grid-cols-1 justify-center gap-12 md:grid-cols-2 md:gap-12">
             <section className="flex justify-center md:max-w-fit">

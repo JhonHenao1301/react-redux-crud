@@ -1,7 +1,7 @@
 
 export default function Contact () {
  return (
-    <div className="flex flex-col text-center gap-4">
+    <div className="flex flex-col text-center gap-4" id="contact">
         <h1 className="text-center">Contact me</h1>
         <p className="text-center">
             Contact me or observe my work through the following social networks and repositories !!
