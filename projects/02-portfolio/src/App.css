@@ -95,7 +95,7 @@ ion-icon {
   .content {
     display: flex;
     flex-direction: column;
-    inline-size: 20rem;
+    inline-size: 22rem;
     padding: 1rem;
     border: 1px solid black;
     border-radius: 1rem;

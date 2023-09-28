@@ -4,13 +4,13 @@ import { useFetch } from '../hooks/useFetch'
 export default function Projects () {
     const { data, isLoading } = useFetch()
     if(isLoading) {
-        return <div className='flex flex-col md:mt-60 gap-8'>
+        return <div className='flex flex-col gap-12 h-screen mt-60'>
             <h1 className='text-center'>Projects</h1>
             <div className='loading mt-5'></div>
         </div>
     }
     return (
-        <div className="flex flex-col md:mt-60 gap-8" id='projects'>
+        <div className="flex flex-col gap-12 p-5 mt-60 h-fit" id='projects'>
             <h1 className='text-center'>Projects</h1>
             {
                 !isLoading ?
@@ -18,7 +18,7 @@ export default function Projects () {
                         return  element.stargazers_count >= 1
                             ? 
                             <div className='flex flex-col gap-12 py-4 md:grid md:grid-cols-card' key={element.id}>
-                                <section className='flex flex-col gap-6 text-center'>
+                                <section className='flex flex-col justify-center gap-6 text-center'>
                                     <h3 className='capitalize'>{element.name}</h3>
                                     <p>{element.description}</p>
                                     <div className="tools grid grid-cols-tag md:grid md:grid-cols-2 gap-2">
