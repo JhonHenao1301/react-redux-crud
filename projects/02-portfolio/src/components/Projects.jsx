@@ -31,10 +31,11 @@ export default function Projects () {
                                         }
                                     </div>
                                     <div className="flex justify-center gap-2">
-                                        <a href={element.html_url}>
+                                        <a href={element.html_url} target='_blank' title='Link to github repo of this project'>
                                             <ion-icon size="large" name="logo-github"></ion-icon>
                                         </a>
-                                        <a href={element.homepage}>
+                                        <a href={element.homepage}
+                                        target='_blank' title='Link to deployment project'>
                                             <ion-icon size="large" name="log-out-outline"></ion-icon>
                                         </a>
                                     </div>
