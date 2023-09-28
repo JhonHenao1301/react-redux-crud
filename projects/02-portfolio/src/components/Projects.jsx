@@ -9,7 +9,7 @@ export default function Projects () {
             <div className='loading mt-5'></div>
         </div>
     }
-    return ( 
+    return (
         <div className="flex flex-col md:mt-60 gap-8" id='projects'>
             <h1 className='text-center'>Projects</h1>
             {
