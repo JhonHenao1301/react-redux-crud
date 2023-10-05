@@ -6,7 +6,7 @@ const initialState = [
         id: "1",
         name: "John Doe",
         email: "john.doe@example.com",
-        github: "johndoe"
+        github: "jdoe"
       },
       {
         id: "2",
@@ -39,7 +39,7 @@ export const usersSlice = createSlice({
     initialState,
     reducers: {
         addNewUser: (state, action) => {
-          const id = crypto.randomUUID()
+          const id = state.length + 1
           state.push({ id, ...action.payload })
         },
         editUserById: (state, action) => {

@@ -4,7 +4,7 @@ import { useUserActions } from "../hooks/useUserAction";
 
 export default function CreateNewUser () {
     const { addUser } = useUserActions()
-	const [result, setResult] = useState(null)
+	const [ result, setResult ] = useState(null)
 
     const handleSubmit = (event) => {
 		event.preventDefault()
@@ -19,7 +19,7 @@ export default function CreateNewUser () {
 		const github = formData.get("github")
 
 		if (!name || !email || !github) {
-			// validaciones que tu quieras
+			// Validations here
 			return setResult("ko")
 		}
 

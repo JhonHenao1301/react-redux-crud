@@ -19,9 +19,6 @@ export default function userList () {
   const users = useAppSelector((state) => state.users)
   const { removeUser } = useUserActions()
 
-  const handleEditButton = (id) => {
-  }
-
   return (
       <>
         <Card>
