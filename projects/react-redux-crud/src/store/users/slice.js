@@ -43,8 +43,15 @@ export const usersSlice = createSlice({
           state.push({ id, ...action.payload })
         },
         editUserById: (state, action) => {
-          const id  = action.payload
-          console.log(state.filter((user) => user.id !== id))
+          const { id, name, email, github }= action.payload
+          const userToEdit = state.find((user) => user.id === id)
+
+          if(userToEdit) {
+            userToEdit.id = id
+            userToEdit.name = name
+            userToEdit.email = email
+            userToEdit.github = github
+          }
         },
         deleteUserById: (state, action) => {
             const id = action.payload

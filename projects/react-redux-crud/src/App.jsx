@@ -1,13 +1,16 @@
 import './App.css'
-import CreateNewUser from './components/CreateNewUser'
-import UserList from './components/UserList.JSX'
+import EditUser from './components/EditUser'
+import UserList from './components/UserList'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
 
 return (
     <div className='flex flex-col gap-4'>
-      <UserList />
-      <CreateNewUser />
+      <Routes>
+        <Route path='/' element={<UserList />} />
+        <Route path='/edit/:id' element={<EditUser />} />
+      </Routes>
     </div>
   )
 }

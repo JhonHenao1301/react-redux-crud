@@ -8,8 +8,8 @@ export const useUserActions = () => {
 		dispatch(addNewUser({ name, email, github }))
 	}
 
-	const editUser = (id) => {  
-		dispatch(editUserById(id))
+	const editUser = ({ id, name, email, github}) => {  
+		dispatch(editUserById({ id, name, email, github}))
 	}
 
 	const removeUser = (id) => {
