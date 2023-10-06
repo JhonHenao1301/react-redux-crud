@@ -61,7 +61,7 @@ export default function EditUser () {
                     <TextInput 
                         name="name"
                         type="text"
-                        onChange={(e) => {
+                        onBlur={(e) => {
                             setValues({ ...values, name: e.target.value})
                         }}
                         placeholder={name}
