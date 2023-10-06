@@ -28,8 +28,8 @@ export default function CreateNewUser () {
 		form.reset()
 	}
     return ( 
-        <Card className="flex flex-col gap-2">
-            <Title>New user</Title>
+        <Card className="flex flex-col gap-2 mb-6">
+            <Title>Create new user</Title>
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                 <TextInput name="name" placeholder="Name" />
                 <TextInput name="email" placeholder="Email" />
