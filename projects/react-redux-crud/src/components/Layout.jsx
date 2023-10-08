@@ -1,8 +1,8 @@
 
 import CreateNewUser from "./CreateNewUser";
 import Navbar from "./Navbar";
-import UserList from "./UserList";
-
+import { UserList } from "./UserList";
+import { Toaster } from 'sonner'
 
 export default function Layout () {
     return ( 
@@ -10,6 +10,7 @@ export default function Layout () {
             <Navbar />
             <UserList />
             <CreateNewUser />
+            <Toaster richColors />
         </div>
     )
 }

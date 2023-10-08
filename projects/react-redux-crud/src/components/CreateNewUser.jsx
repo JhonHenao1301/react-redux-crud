@@ -1,7 +1,7 @@
 import { Card, Title, TextInput, Badge, Button } from "@tremor/react";
 import { useState } from "react";
 import { useUserActions } from "../hooks/useUserAction";
-import { expression } from '../assets/constants'
+import { useValidation } from "../hooks/useValidation";
 
 export default function CreateNewUser () {
     const { addUser } = useUserActions()
@@ -11,27 +11,7 @@ export default function CreateNewUser () {
 	const [ result, setResult ] = useState(null)
 
 	const handleChange = (event) => {
-		const typeData = event.target.name
-		const text = event.target.value
-
-		switch(typeData) {
-			case 'name':
-				if (expression.name.test(text)) {
-					return setNameCheck('true');
-				}
-				return setNameCheck('false');
-			case 'email':
-				if (expression.email.test(text)) {
-					return setEmailCheck('true')
-				}
-				// console.log(expression.email.test(text))
-				return setEmailCheck('false')
-			case "github":
-				if (expression.github.test(text)) {
-					return setGitCheck("true")
-				}
-				return setGitCheck("false")
-		}
+		useValidation(event, { setNameCheck, setEmailCheck, setGitCheck })
 	}
 
     const handleSubmit = (event) => {
@@ -73,7 +53,7 @@ export default function CreateNewUser () {
 					onBlur={handleChange}
 				/>
 				{
-					emailCheck === "false" && (<Badge size="sm" color='red'>This field may contain just letters</Badge>)
+					emailCheck === "false" && (<Badge size="sm" color='red'>This field must contain @ and finish . something</Badge>)
 				}
                 <TextInput 
 					name="github" 
@@ -81,7 +61,7 @@ export default function CreateNewUser () {
 					onBlur={handleChange} 
 				/>
 				{
-					gitCheck === "false" && (<Badge size="sm" color='red'>This field must contain alphanumerics values</Badge>)
+					gitCheck === "false" && (<Badge size="sm" color='red'>This field just must contain  alphanumerics values</Badge>)
 				}
 
                 <Button type="submit">
@@ -89,10 +69,8 @@ export default function CreateNewUser () {
 				</Button>
 				<span>
                     {
-						result === "ok" && <Badge size="xl" color='green'> Saved correctly </Badge>
-					}
-                    {
-						result === "ko" && <Badge size="xl" color='red'>Field error</Badge>
+						result === "ko" && 
+						<Badge size="xl" color='red'>Field error</Badge>
 					}
                 </span>
             </form>

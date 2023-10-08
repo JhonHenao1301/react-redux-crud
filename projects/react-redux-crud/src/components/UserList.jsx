@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import { useAppSelector } from "../hooks/store";
 import { useUserActions } from "../hooks/useUserAction";
 
-export default function userList () {
+export function UserList () {
   const users = useAppSelector((state) => state.users)
   const { removeUser } = useUserActions()
 
