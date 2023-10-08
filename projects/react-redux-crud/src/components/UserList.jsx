@@ -27,7 +27,7 @@ export function UserList () {
         <TableHead>
           <TableRow>
           <TableHeaderCell>
-                Id
+                #
             </TableHeaderCell>
             <TableHeaderCell>
                 Name
@@ -46,10 +46,10 @@ export function UserList () {
 
         <TableBody>
           {
-            users?.map((item) => (
+            users?.map((item, index) => (
               <TableRow key={item.name} className="">
                   <TableCell className="">
-                      {item.id}
+                      { index + 1 }
                   </TableCell>
                   <TableCell className="flex items-center gap-4">
                       <img

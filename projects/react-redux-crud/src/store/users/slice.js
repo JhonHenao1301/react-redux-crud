@@ -46,7 +46,7 @@ export const usersSlice = createSlice({
     initialState,
     reducers: {
         addNewUser: (state, action) => {
-          const id = state.length + 1
+          const id = crypto.randomUUID()
           state.push({ id, ...action.payload })
           toast.success(`User created`)
         },
