@@ -2,9 +2,8 @@ import { Card, Title, TextInput, Badge, Button } from "@tremor/react";
 import { useState } from "react";
 import { useUserActions } from "../hooks/useUserAction";
 import { useValidation } from "../hooks/useValidation";
-import { useSubmit } from "../hooks/useSubmit";
 
-export default function CreateNewUser () {
+export function CreateNewUser () {
     const { addUser } = useUserActions()
 	const [ nameCheck, setNameCheck ] = useState(null)
 	const [ emailCheck, setEmailCheck ] = useState(null)
@@ -74,7 +73,7 @@ export default function CreateNewUser () {
 				<span>
                     {
 						result === "ko" && 
-						<Badge size="xl" color='red'>Field error</Badge>
+						<Badge size="sm" color='red'>Field error</Badge>
 					}
                 </span>
             </form>
