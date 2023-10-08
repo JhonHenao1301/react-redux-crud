@@ -9,7 +9,7 @@ export const useValidation = (e, { setNameCheck, setEmailCheck, setGitCheck }) =
     switch(typeData) {
         case 'name':
             if (expression.name.test(text)) {
-                return setNameCheck('true');
+                 return setNameCheck('true');
             }
             return setNameCheck('false');
         case 'email':

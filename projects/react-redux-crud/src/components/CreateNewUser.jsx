@@ -2,6 +2,7 @@ import { Card, Title, TextInput, Badge, Button } from "@tremor/react";
 import { useState } from "react";
 import { useUserActions } from "../hooks/useUserAction";
 import { useValidation } from "../hooks/useValidation";
+import { useSubmit } from "../hooks/useSubmit";
 
 export default function CreateNewUser () {
     const { addUser } = useUserActions()
@@ -19,9 +20,12 @@ export default function CreateNewUser () {
 
 		setResult(null)
 
-		if (nameCheck === 'false' || emailCheck === 'false' || gitCheck === 'false') {
+		if(!nameCheck || !emailCheck || !gitCheck ) {
 			return setResult("ko")
 		}
+			else if (nameCheck === 'false' || emailCheck === 'false' || gitCheck === 'false') {
+				return setResult("ko")
+			}
 
 		const form = event.target
 		const formData = new FormData(form)
@@ -30,8 +34,8 @@ export default function CreateNewUser () {
 		const email = formData.get("email")
 		const github = formData.get("github")
 
-		addUser({ name, email, github })
 		setResult("ok")
+		addUser({ name, email, github })
 		form.reset()
 	}
 

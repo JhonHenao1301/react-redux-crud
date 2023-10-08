@@ -30,7 +30,7 @@ export default function EditUser () {
     const handleChange = (event) => {
 		useValidation(event, { setNameCheck, setEmailCheck, setGitCheck })
 
-        if( !nameCheck || !emailCheck || !gitCheck ) {
+        if(!nameCheck || !emailCheck || !gitCheck) {
             return
         }
 	}
@@ -40,6 +40,13 @@ export default function EditUser () {
 
 		setResult(null)
 
+        if(!nameCheck || !emailCheck || !gitCheck ) {
+			return setResult("ko")
+        }
+            else if (nameCheck === 'false' || emailCheck === 'false' || gitCheck === 'false') {
+                return setResult("ko")
+            }
+
 		const form = event.target
 		const formData = new FormData(form)
 
@@ -47,11 +54,8 @@ export default function EditUser () {
 		const email = formData.get("email")
 		const github = formData.get("github")
 
-		if (nameCheck === 'false' || emailCheck === 'false' || gitCheck === 'false') {
-			return setResult("ko")
-		}
-
 		setResult("ok")
+        
 		setValues({ id, name, email, github })
         editUser(values)
         navigate('/')
