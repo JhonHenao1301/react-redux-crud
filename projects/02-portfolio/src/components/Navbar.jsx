@@ -20,7 +20,7 @@ export default function Navbar() {
                 </div>
 
                 <div>
-                    <ul className={`bg-slate-500 md:flex md:items-center pt-4 pb-4 absolute md:static md:bg-slate-700 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-8 transition-all duration-500 ease-in ${open ? 'top-20 ':'top-[-490px]'}`}>
+                    <ul className={`flex flex-col gap-3 bg-slate-500 md:flex md:items-center pt-4 pb-4 absolute md:static md:bg-slate-700 md:flex-row md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-8 transition-all duration-500 ease-in ${open ? 'top-20 ':'top-[-490px]'}`}>
                         {[
                             {name:'Home', link:'#home'},
                             {name:'About', link:'#about'},
@@ -29,7 +29,7 @@ export default function Navbar() {
                             {name:'Contact', link:'#contact'},
                         ].map(({name, link}, index) => (
                             <li className="md:ml-6 text-xl md:my-0 my-6" key={index}>
-                                <a href={link} className="p-2 rounded-lg font-medium hover:bg-slate-200 hover:text-slate-700 duration-500" onClick={()=>setOpen(!open)}>
+                                <a href={link} className="navbar-link rounded-lg font-medium duration-500" onClick={()=>setOpen(!open)}>
                                     {name}
                                 </a>
                             </li>

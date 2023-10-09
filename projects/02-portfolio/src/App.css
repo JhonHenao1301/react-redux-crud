@@ -6,12 +6,16 @@ h1 {
     @apply text-title font-extrabold
 }
 
+h2 {
+  @apply text-subtitle font-semibold text-slate-600
+}
+
 h3 {
-    @apply text-subtitle font-medium text-slate-400
+    @apply text-normal font-normal text-slate-400
 }
 
 .tag {
-    @apply p-1 rounded-lg bg-slate-200 text-slate-700
+    @apply p-1 rounded-lg bg-slate-200 text-slate-600
 }
 
 #root {
@@ -24,6 +28,25 @@ h3 {
 
 ion-icon {
   font-size: 4rem;
+}
+
+.navbar-link {
+  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.navbar-link::after {
+  content: '';
+  display: block;
+  background: #fff;
+  width: 90%;
+  margin-top: 0.15rem;
+  height: 0.15rem;
+  clip-path: var(--clippy);
+  transition: clip-path .5s ease;
+}
+
+.navbar-link:hover {
+  --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%)
 }
 
 /* loading animation */
