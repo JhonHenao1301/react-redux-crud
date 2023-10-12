@@ -10,7 +10,7 @@ export default function Projects () {
         </div>
     }
     return (
-        <div className="flex flex-col gap-12 p-5 mt-60 h-fit" id='projects'>
+        <div className="flex flex-col gap-12 px-10 md:mt-60 h-fit" id='projects'>
             <h1 className='text-center'>Projects</h1>
             {
                 !isLoading ?

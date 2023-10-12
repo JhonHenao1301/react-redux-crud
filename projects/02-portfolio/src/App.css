@@ -2,42 +2,118 @@
 @tailwind components;
 @tailwind utilities;
 
+
 h1 {
-    @apply text-title font-extrabold
+  @apply text-title font-extrabold
+  text-slate-700 dark:text-slate-200
 }
 
 h2 {
-  @apply text-subtitle font-semibold text-slate-600
+  @apply text-subtitle font-semibold 
+  text-slate-600 dark:text-slate-400 
 }
 
 h3 {
-    @apply text-normal font-normal text-slate-400
+  @apply text-normal font-normal text-slate-400
+}
+
+.main-layout {
+  @apply 
+  flex 
+  flex-col
+  font-link 
+  items-center 
+  bg-sky-50 
+  text-slate-800 
+  dark:bg-slate-950 dark:text-slate-200
 }
 
 .tag {
-    @apply p-1 rounded-lg bg-slate-200 text-slate-600
-}
-
-#root {
-  block-size: 100vh;
+    @apply p-1 rounded-lg bg-slate-300 text-slate-700 dark:bg-slate-600 dark:text-slate-200
 }
 
 .font-link {
   font-family: 'Poppins', sans-serif;
 }
 
-ion-icon {
-  font-size: 4rem;
+/* Navbar */
+.navbar-ul {
+  @apply menu 
+  md:flex md:items-center md:gap-4 md:static md:flex-row md:z-auto md:w-auto md:pl-0 
+  transition-all duration-500 ease-in
+  dark:bg-slate-900 dark:opacity-90 dark:text-slate-50 
+}
+
+.menu {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.navbar-li {
+  @apply md:ml-6 md:my-0 my-6
+}
+
+#home {
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 3rem;
+  z-index: 1;
+}
+
+/* #home::after {
+  content: "";
+  position: absolute;
+  inline-size: 72%;
+  block-size: 100vh;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  max-width: 1600px;
+} */
+
+@media (max-width: 768px) {
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  #home::after {
+    inline-size: 50%;
+    block-size: 100vh;
+  }
+}
+
+
+.menu li {
+  display: flex;
+  justify-content: center;
 }
 
 .navbar-link {
   --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
 }
 
-.navbar-link::after {
+.navbar-link-dark::after {
   content: '';
   display: block;
   background: #fff;
+  width: 90%;
+  margin-top: 0.15rem;
+  height: 0.15rem;
+  clip-path: var(--clippy);
+  transition: clip-path .5s ease;
+}
+
+.navbar-link::after {
+  content: '';
+  display: block;
+  background: #000;
   width: 90%;
   margin-top: 0.15rem;
   height: 0.15rem;
