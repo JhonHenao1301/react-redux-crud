@@ -3,7 +3,7 @@ import pdf from '../assets/hv_me.pdf'
 
 export default function Home () {
  return ( 
-    <div className="home md:after:w-3/4" id='home'>
+    <div className="home md:after:w-3/5" id='home'>
         <section className='flex justify-center items-end md:items-center'>
             <img src={photo} className='rounded-full w-48 h-fit z-10' alt="" />
         </section>
