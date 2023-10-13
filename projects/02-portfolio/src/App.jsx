@@ -10,7 +10,7 @@ import './App.css'
 export default function App() {
 
   return (
-    <div className='main-layout'>
+    <div className='app'>
       <Navbar />
       <Layout>
         <Home />

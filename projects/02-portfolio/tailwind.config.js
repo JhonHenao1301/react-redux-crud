@@ -16,8 +16,8 @@ export default {
     },
     fontSize: {
       'title': '2rem',
-      'subtitle': '1.6rem',
-      'normal': '1.4rem',
+      'subtitle': '1.4rem',
+      'normal': '1.2rem',
       'tag': '.7rem',
     }
   },

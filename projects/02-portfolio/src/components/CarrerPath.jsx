@@ -3,7 +3,7 @@ import { experience } from '../mocks/CarrerPathData'
 export default function CarrerPath () {
     // console.log(education);
     return ( 
-        <div className='after:bg-indigo-500 flex flex-col gap-12 justify-center h-screen w-screen z-10 px-20 md:px-24 lg:px-4' id='carrer'>
+        <div className='after:bg-indigo-500 flex flex-col gap-12 justify-center h-screen z-10 px-20 md:px-24 lg:px-4' id='carrer'>
             <h1 className='text-center'>Experience</h1>
             <div className='flex justify-center'>
                 <div className='timeline dark:md:bg-slate-50 md:absolute md:w-px md:left-1/2 md:bg-black'>
