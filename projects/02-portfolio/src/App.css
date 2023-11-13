@@ -83,18 +83,7 @@ h3 {
 /* Home */
 .home {
   @apply grid auto-cols-auto justify-center min-h-screen gap-12 z-10 px-20
-  md:px-24 lg:px-4 md:grid-flow-col md:justify-center xl:gap-24 dark:after:bg-indigo-500;
-}
-
-.home::after {
-  content: "";
-  position: absolute;
-  inline-size: 50%;
-  block-size: 100vh;
-  right: 0;
-  background-color: #fcf0d6d7;
-  top: 79px;
-  z-index: 0;
+  md:px-24 lg:px-4 md:grid-flow-col md:justify-center xl:gap-24;
 }
 
 @media (max-width: 768px) {
