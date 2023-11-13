@@ -44,7 +44,7 @@ export default function Projects () {
                                     <img 
                                         className='rounded-xl w-auto'
                                         src={`images/${element.name}.jpg`}
-                                        alt="" 
+                                        alt={element.description} 
                                     />
                                 </section>
                             </div>
